@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.qazaqbyexample">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon3"
+        android:label="Qazaq by Example"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.MainActivity" />
+        </activity>
+        <activity android:name=".UserAreaActivity" />
+        <activity
+            android:name=".BaseActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".UserAccount"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".City"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Cafe"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Doctors"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Family"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Food"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Friends"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Intro"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".School"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Shopping"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".Travelling"
+            android:parentActivityName=".BaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+        </activity>
+        <activity
+            android:name=".MyList"
+            android:parentActivityName=".UserAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.UserAccount" />
+        </activity>
+        <activity
+            android:name=".ChangePassword"
+            android:parentActivityName=".UserAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.user.qazaqbyexample.UserAccount" />
+        </activity>
+    </application>
+
+</manifest>

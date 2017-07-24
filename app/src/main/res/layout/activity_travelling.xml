@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.qazaqbyexample.City"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_weight="0.04"
+        android:background="@color/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/textDefault"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/travelling"
+            android:textColor="@color/textDefault"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- FIRST -->
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel01"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel01R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn1" layout="@layout/button"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <!-- SECOND -->
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel02"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel02R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn2" layout="@layout/button"/>
+
+            <!-- THIRD -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel03"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel03R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn3" layout="@layout/button"/>
+
+            <!-- FORTH -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel04"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel04R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn4" layout="@layout/button"/>
+
+            <!-- FIFTH -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel05"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel05R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn5" layout="@layout/button"/>
+
+            <!-- SIXTH -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel06"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel06R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn6" layout="@layout/button"/>
+
+            <!-- SEVENTH -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel07"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel07R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn7" layout="@layout/button"/>
+
+            <!-- EIGHTH -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv15"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel08"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv16"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel08R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn8" layout="@layout/button"/>
+
+            <!-- NINTH -->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv17"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel09"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv18"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel09R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn9" layout="@layout/button"/>
+
+            <!-- TENTH -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/textAccent" />
+
+            <TextView
+                android:id="@+id/tv19"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel10"
+                android:textAlignment="viewStart"
+                android:textColor="@color/indigo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv20"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="start"
+                android:background="@color/textDefault"
+                android:text="@string/travel10R"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <include android:id="@+id/btn10" layout="@layout/button"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

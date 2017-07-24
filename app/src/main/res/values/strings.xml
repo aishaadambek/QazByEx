@@ -1,0 +1,251 @@
+<resources>
+    <string name="app_name">QazaqByExample</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="welcomeText">Qazaq by Example - быстрый, простой и доступный метод отточить разговорный казахский. То, чего вы хотели, совсем рядом. Плавная, грамматически верная речь - то, что мы вам обещаем.</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- For base activity -->
+    <string name="city">&#160;&#160;Қала көшелерінде\n</string>
+    <string name="cafe">&#160;&#160;Кафеде\n</string>
+    <string name="doctors">&#160;&#160;Ауруханада\n</string>
+    <string name="family">&#160;&#160;Отбасымен\n</string>
+    <string name="food">&#160;&#160;Тамақ әзірлегенде\n</string>
+    <string name="friendship">&#160;&#160;Достармен\n</string>
+    <string name="intr_yourself">&#160;&#160;Танысқанда\n</string>
+    <string name="school">&#160;&#160;Мектепте\n</string>
+    <string name="shopping">&#160;&#160;Дүкенде\n</string>
+    <string name="travelling">&#160;&#160;Саяхатта\n</string>
+
+    <!-- For City activity -->
+    <string name="city01">\nЕң жақын полиция бөлімі қай жерде/қайда орналасқан?</string>
+    <string name="city01R">Где расположено ближайшее отделение полиции?</string>
+    <string name="city02">Тұңғыш президентінің мұражайға дейін жолақысы қанша тұрады?</string>
+    <string name="city02R">Сколько стоит проезд до музея первого президента?</string>
+    <string name="city03">Базарлық (балалар ойыншығы, тәттілер) қайда сатып алуға болады?</string>
+    <string name="city03R">Где можно купить сувениры (детские игрушки, сладости)?</string>
+    <string name="city04">\nМына көлік қалалық емханаға бара ма?</string>
+    <string name="city04R">Эта маршрутка едет до городской больницы?</string>
+    <string name="city05">“Мега” сауда орталығының аялдамасына қандай автобус жүреді?</string>
+    <string name="city05R">Какой автобус едет до остановки торгового центра "Мега"?</string>
+    <string name="city06">Кешіріңіз, уақытыныз болса, мені суретке түсіріп жібересіз бе?</string>
+    <string name="city06R">Извините, если у вас есть время, сфотографируете меня?</string>
+    <string name="city07">Ең жақын анықтама бюросы Сауран және Бөгенбай батыр көшесінің қиылысында.</string>
+    <string name="city07R">Ближайшая справочная расположена на пересечении улиц Сауран и Богенбай батыр.</string>
+    <string name="city08">\nПанфилов паркіне жаяу қалай өтуге болады?</string>
+    <string name="city08R">Как можно пешком пройти до парка Панфилова?</string>
+    <string name="city09">Мен орталыққа жақынырақ орналасқан аудандардан екі бөлмелі пәтер іздеп жүрмін.</string>
+    <string name="city09R">Я ищу двух-комнатную квартиру в районах недалеко от центра.</string>
+    <string name="city10">Ұлттық дәстүрлерге арналған фестиваль өткен аптадан бері болып жатыр.</string>
+    <string name="city10R">Фестиваль, посвящённый народным традициям, проводится с прошлой недели.</string>
+
+    <!-- For Cafe activity -->
+    <string name="cafe01">\nҚандай тапсырыс бересіз?</string>
+    <string name="cafe01R">Что будете заказывать?</string>
+    <string name="cafe02">\nКешіріңіз, біздің чегімізді әкеліп аласыз ба?</string>
+    <string name="cafe02R">Извините, можете принести наш чек?</string>
+    <string name="cafe03">\nОсы жерде қаладағы ең дәмді пиццаны әзірлейді.</string>
+    <string name="cafe03R">Здесь готовят лучшую пиццу в городе.</string>
+    <string name="cafe04">\nӨкінішке орай, жазғы дәмханада бос орын жоқ.</string>
+    <string name="cafe04R">На летнике, к сожалению, нет свободных мест.</string>
+    <string name="cafe05">\nМен бүгінгі кешке үстелді өз атыма қалдырсам деп едім.</string>
+    <string name="cafe05R">Я хочу зарезервировать столик на сегодняшний вечер.</string>
+    <string name="cafe06">\nЖақсы жұмыс үшін даяршыға шайлық/сыйлық тиеселі.</string>
+    <string name="cafe06R">Оффицианту причитаются чаевые за хорошую работу.</string>
+    <string name="cafe07">\nМәзірде қандай тамақты дәм татуға кеңес бересіз?</string>
+    <string name="cafe07R">Какое блюдо в меню вы посоветуете попробовать?</string>
+    <string name="cafe08">Сол жерғе барайық. Онда ылғи/үнемі сазды да жанды әуенге балқисыз.</string>
+    <string name="cafe08R">Пойдем туда, там всегда играет очень красивая живая музыка.</string>
+    <string name="cafe09">Осы кафеде сенбі сайын шәйге/шайға акциялар өткізіледі.</string>
+    <string name="cafe09R">В этом кафе действуют акции на чай по вторникам.</string>
+    <string name="cafe10">\nОсы кафеде өте жақсы әрі жедел қызмет көрсетіледі.</string>
+    <string name="cafe10R">В этом кафе очень хорошее и оперативное обслуживание.</string>
+
+    <!-- For Doctors activity -->
+    <string name="doctors01">\nАузыңызды/көзіңізде ашыңыз/жабыңыз</string>
+    <string name="doctors01R">Откройте/закройте рот/глаза</string>
+    <string name="doctors02">Мен жазылып келе жатырмын. Мені жақында шығарады.</string>
+    <string name="doctors02R">Я вылечиваюсь. Меня скоро выпишут.</string>
+    <string name="doctors03">\nСіздің қай жеріңіз ауырып тұр, көрсетіңізші.</string>
+    <string name="doctors03R">Покажите, что у вас болит.</string>
+    <string name="doctors04">Оның аллергиясы болғандықтан, оған цитрус жеуге болмайды.</string>
+    <string name="doctors04R">Ей нельзя кушать цитрусы, так как у неё аллергия.</string>
+    <string name="doctors05">\nСіз талдау үшін қан (несеп, шәует) тапсыруыңыз қажет.</string>
+    <string name="doctors05R">Вам нужно сдать кровь(моча, сперма) для анализов.</string>
+    <string name="doctors06">\nСіздің дене қызуыңыз бар.</string>
+    <string name="doctors06R">У вас температура.</string>
+    <string name="doctors07">\nОл ауырып қалды, қатты суық тиіп қалыпты.</string>
+    <string name="doctors07R">Он заболел, сильно простудился.</string>
+    <string name="doctors08">\nАлдымен, қолыңызды рентгенге түсіру керек.</string>
+    <string name="doctors08R">Для начала надо сделать рентген руки.</string>
+    <string name="doctors09">\nОның жүрегі ауырады, қан қысымы да жоғары.</string>
+    <string name="doctors09R">У него болит сердце и высокое кровяное давление.</string>
+    <string name="doctors10">\nЖүзіңіз бозарып тұр ғой, бір жеріңіз ауырып тұр ма?</string>
+    <string name="doctors10R">Вы побледнеди, у вас что-то болит?</string>
+
+    <!-- For Family activity -->
+    <string name="family01">\nОның отбасы үлкен екен.</string>
+    <string name="family01R">У него/неё, оказывается, большая семья.</string>
+    <string name="family02">Қазір әкем мен маманың бір келіні, бір күйеу баласы және екі немересі бар.</string>
+    <string name="family02R">Сейчас у моих мамы и папы одна сноха, один зять и двое внуков.</string>
+    <string name="family03">\nОл менің жеңгем Айнагүл, ағамның әйелі.</string>
+    <string name="family03R">Она моя невествка Айнагуль, жена моего брата.</string>
+    <string name="family04">\nОл менің жездем Айдар, әпкемнің жұбайы.</string>
+    <string name="family04R">Он мой зять Айдар, муж моей сестры.</string>
+    <string name="family05">\nСіздің балаларыңыз нешеде?</string>
+    <string name="family05R">Сколько лет вашим детям?</string>
+    <string name="family06">Олардың асырап алған балалары бар.</string>
+    <string name="family06R">У них есть усыновлённые/удочерённые дети.</string>
+    <string name="family07">\nКеліннің енесі оған үй шаруашылығымен көмектеседі.</string>
+    <string name="family07R">Свекровь невестки помогает ей с домашним хозяйством.</string>
+    <string name="family08">\nОның жұбайының ата-аналары жетпіске таяп қалды.</string>
+    <string name="family08R">Родителям его/её супруга/супруги почти семьдесят.</string>
+    <string name="family09">\nБіз үйде бесеуміз.</string>
+    <string name="family09R">Нас в семье пятеро.</string>
+    <string name="family10">Үйге қонаққа кел, барлығымен таныстырамын. Отбасым өте қонақжай.</string>
+    <string name="family10R">Приходи домой в гости, со всеми познакомлю. Моя семья очень гостеприимная.</string>
+
+    <!-- For Food activity -->
+    <string name="food01">Бауырсақ жасау үшін бізге ақ ұн, жылы сүт, сары май, ашытқы, түз және өсімдік май керек.</string>
+    <string name="food01R">Чтобы приготовить баурсаки нам нужны белая мука, тёплое молоко, сливочно масло, дрожжи, соль и растительное масло.</string>
+    <string name="food02">Бауырсақты жұмыртқасыз жасасаңыз жұмсағырақ болады.</string>
+    <string name="food02R">Баурсаки будут мягче, если их готовить без яиц.</string>
+    <string name="food03">Осы бәліштің қамыры дәмді болуға үшін барлық ингредиенттерді жақсылап араластыру керек.</string>
+    <string name="food03R">Чтобы тесто этого пирога получилось вкусным, надо хорошо перемешать все ингредиенты.</string>
+    <string name="food04">\nҰнды шұңғыл аяққа салып, жұмсақ қамыр илеңіз.</string>
+    <string name="food04R">Высыпьте муку в глубокую миску и замесите мягкое тесто.</string>
+    <string name="food05">Қамыр бір сағат көтерілген соң, мен оны дереу отаумен жаямын.</string>
+    <string name="food05R">После того как тесто за час поднимется, я его сразу раскатываю скалкой.</string>
+    <string name="food06">\nАпам осы көжеге бір шәй қасық бұрыш қосқан еді.</string>
+    <string name="food06R">Моя бабушка добавляла в этот суп чайную ложку перца.</string>
+    <string name="food07">Тағамдарымның дәмін татып көріп, бағасын беретін менің отбасым.</string>
+    <string name="food07R">Моя семья пробует мои блюда и даёт им оценку.</string>
+    <string name="food08">\nБешпармаққа тұздықты қалай әзірлейсін?</string>
+    <string name="food08R">Как ты готовишь подливу для бешпармака?</string>
+    <string name="food09">\nСалатқа майонез қосайын ба?</string>
+    <string name="food09R">Добавить майонез в салат?</string>
+    <string name="food10">Бәлішті алдын-ала қыздырылған пеште жарты сағат пісіріңіз.</string>
+    <string name="food10R">Выпекайте пирог полчаса в заранее разогретой духовке.</string>
+
+    <!-- For Friends activity -->
+    <string name="friends01">\nШың достар қиыншылықта білінеді.</string>
+    <string name="friends01R">Настоящие друзья познаются в беде.</string>
+    <string name="friends02">\nМен достарымды сағындым.</string>
+    <string name="friends02R">Я соскучился по своим друзьям.</string>
+    <string name="friends03">\nАйына бірнеше рет достармен кездесуге тырысамыз.</string>
+    <string name="friends03R">Мы с друзьями стараемся видеться несколько раз в месяц.</string>
+    <string name="friends04">Достықты сақтау үшін достарымен адал әрі аққөңіл бол.</string>
+    <string name="friends04R">Чтобы сохранить дружбу, будь справедлив и честен с друзьями.</string>
+    <string name="friends05">Достарын өміріне қуаныш әкелгендіктен, оларды бағалғанын дұрыс.</string>
+    <string name="friends05R">Так как друзья приносят радости в твою жизнь, ценить их - это правильно.</string>
+    <string name="friends06">Қуанышқа орай, анам маған достармен кешке киноға шығуға рұқсат берген.</string>
+    <string name="friends06R">К счастью, мама разрешила мне выйти вечером в кино с друзьями.</string>
+    <string name="friends07">Ата-аналарымның достары аз, алайда барлығы расында адал достар.</string>
+    <string name="friends07R">У моих родителей мало друзей, но зато они все действительно преданные друзья.</string>
+    <string name="friends08">\nОл Дианамен дос болғалы бері көңіл-күйі жақсартылған.</string>
+    <string name="friends08R">С тех пор, как он/она дружит с Дианой, у него/неё улучшилось настроение.</string>
+    <string name="friends09">Достыққа келсек, ол адамға берілетін ең бағалы заттардың бірі.</string>
+    <string name="friends09R">Что касается дружбы, это одна из самых ценных вещей у человека.</string>
+    <string name="friends10">Мен бейтаныс адамдармен тез тіл табысып, тез дос болып аламын.</string>
+    <string name="friends10R">Я быстро нахожу общий язык с незнакомыми людьми и быстро с ними сдруживаюсь.</string>
+
+    <!-- For Intr activity -->
+    <string name="intr01">\nМенің атым Айнагүл. Мен осы мектептің жаңа ұстазым.</string>
+    <string name="intr01R">Меня зовут Айнагуль. Я новый учитель в этой школе.</string>
+    <string name="intr02">\nСіздің/сенің жасыңыз/жасың қаншада?</string>
+    <string name="intr02R">Сколько Вам/тебе лет?</string>
+    <string name="intr03">\nСізді ресторанға/кафеге шақыруға рұқсат етіңіз.</string>
+    <string name="intr03R">Позвольте пригласить Вас в кафе/ресторан.</string>
+    <string name="intr04">\nОның тұрмысқа шыққанына үш жыл болды.</string>
+    <string name="intr04R">Прошло три года как она замужем.</string>
+    <string name="intr05">\nСіз қайда туылғансыз?\nСіз қай жерденсіз?</string>
+    <string name="intr05R">Откуда вы роддом?</string>
+    <string name="intr06">Көріскенше.\nКелесіде кездескенше/келесіде жолыққанша.</string>
+    <string name="intr06R">До свидания.\nДо скорого.</string>
+    <string name="intr07">\nЖағдайың қалай?\nҚалайсың?</string>
+    <string name="intr07R">Как дела?/Как поживаешь?</string>
+    <string name="intr08">\nАпта соңы жақсы өтсін!</string>
+    <string name="intr08R">Хороших выходных!</string>
+    <string name="intr09">\nТанысқаныма қуаныштымын.</string>
+    <string name="intr09R">Рад знакомству.</string>
+    <string name="intr10">\nОл да, серіктесі де Америкадан.</string>
+    <string name="intr10R">И он, и его напарник из Америки.</string>
+
+    <!-- For School activity -->
+    <string name="school01">\nМектепті қашан бітіресін?</string>
+    <string name="school01R">Когда ты заканчивашь школу?</string>
+    <string name="school02">Мектеп оқушылардан сабырлылығын, мықтылығын, оқуға сүйеспеншілігін талап етеді.</string>
+    <string name="school02R">Школа требует от учеников терпения, прочности и любви к учёбе.</string>
+    <string name="school03">\nМектептер әрбір адамға негізгі білім беруге бағыттылған.</string>
+    <string name="school03R">Школы направлены на то, чтобы дать каждому человеку основные знания.</string>
+    <string name="school04">Кейбір адамдар мектеп уақытты өмірлерінің ең бақытты уақыты деп есептейді.</string>
+    <string name="school04R">Некоторые люди считают школьное время самым счастливым.</string>
+    <string name="school05">Ұстаздар оқушыларға болашақта жұмыс істейтін саланы таңдауға көмек көрсетуге тиіс.</string>
+    <string name="school05R">Учителя должны помогать ученикам с выбором отрасли, где работать в будущем.</string>
+    <string name="school06">Өкінішке орай, кейбір мектептер оқушыларға үлкен қысым көрсетеді.</string>
+    <string name="school06R">К сожалению, некоторые школы оказывают большое давление на учеников.</string>
+    <string name="school07">Мектептен кейін жоғары оқу орындарға оқуға түсу үшін емтихан тапсыру керек.</string>
+    <string name="school07R">Чтобы поступить в ВУЗы после школы, надо сдавать экзамены.</string>
+    <string name="school08">\nМұғалімдер мен оқушылар өзара құрмет көрсеткені абзал.</string>
+    <string name="school08R">Это правильно, когда учителя и ученики выказывают взаимоуважение.</string>
+    <string name="school09">Мектепте қай пәндерді оқу керек екендігін білім және ғылым министрлігі шешеді.</string>
+    <string name="school09R">Министерство науки и образования решает какие предметы изучать в школе.</string>
+    <string name="school10">\nМектепте алған білім болашақтың тірегі.</string>
+    <string name="school10R">Знания, полученные в школе, - основа будущего.</string>
+
+    <!-- For Shopping activity -->
+    <string name="shop01">\nАптаның соңында анам екеуміз дүкен араламақпыз.</string>
+    <string name="shop01R">Мы вдвоём с мамой собираемся пройтись по магазинам в конце недели.</string>
+    <string name="shop02">Жібек жолы көшесіндегі сауда орталықтарда сізге керек дүкендердің барлығы бар.</string>
+    <string name="shop02R">В торговых центрах на улице Жибек жолы есть все нужные вам магазины.</string>
+    <string name="shop03">Мен осы демалыста зергерлік дүкенге барып, анамға сыйлық алмақшымын.</string>
+    <string name="shop03R">На этих выходных я собираюсь купить маме подарок в ювелирном магазине.</string>
+    <string name="shop04">\nОсы жейденің басқа өлшемі бар ма?</string>
+    <string name="shop04R">Есть другой размер этой рубашки?</string>
+    <string name="shop05">\nОсы көйлектің бағасы 35000 теңге. Тым қымбат екен.</string>
+    <string name="shop05R">Цена этого платья 35000 тенге. Оказывается, слишком дорого.</string>
+    <string name="shop06">\nБұл шалбардың мақтадан жасалған үлгісі бар.</string>
+    <string name="shop06R">У этих брюк есть экземпляр из хлопка.</string>
+    <string name="shop07">\nСіз маған осы жердегі ең арзан заттарды көрсете аласыз ба?</string>
+    <string name="shop07R">Вы можете показать мне здешние самые дешёвые вещи?</string>
+    <string name="shop08">Бізге кем дегенде бір жыл жұмыс тәжірибесі бар дүкенші қажет.</string>
+    <string name="shop08R">Нам нужен продавец с по крайней мере годовым опытом.</string>
+    <string name="shop09">\nОсы дүкен өз жарнамалық науқанына үлкен ақша салады.</string>
+    <string name="shop09R">Этот магазин вкладывает большие деньги в свою рекламную кампанию.</string>
+    <string name="shop10">\nМенің мына белбеуді басқасына ауыстырғым келеді</string>
+    <string name="shop10R">Я хочу обменять этот ремень на другой.</string>
+
+    <!-- For Travelling activity -->
+    <string name="travel01">\nМаған Москваға дейін және кері қарай билет керек.</string>
+    <string name="travel01R">Мне нужен один билет до Москвы и обратно.</string>
+    <string name="travel02">Сіздің қонақүйдің номері бір тәулікке бір адам басына қанша тұрады?</string>
+    <string name="travel02R">Сколько стоит в вашем отеле номер в сутки на человека?</string>
+    <string name="travel03">\nМіне менің төлқұжатым және кедендік декларациям.</string>
+    <string name="travel03R">Вот мой паспорт и таможенная декларация.</string>
+    <string name="travel04">\nӘдетте жүрдек пойызға билеттер қымбатырақ түрады.</string>
+    <string name="travel04R">Обычно, билеты на скоростной поезд стоят подороже.</string>
+    <string name="travel05">\nҰшаққа билетерімізді кредит картасымен төлеуге болады ма?</string>
+    <string name="travel05R">Можно ли оплатить наши билеты на самолёт кредитной картой?</string>
+    <string name="travel06">Менің АҚШ-қа виза алу үшін алдымен консулмен сұхбат өткізуім керек.</string>
+    <string name="travel06R">Для получения визы в США для начала мне нужно провести беседу с консулом.</string>
+    <string name="travel07">Оның созылмалы ауру болғандықтан, ол саяхат жасағанда, үнемі/әрқашан дәрілерін бірге алып жүреді.</string>
+    <string name="travel07R">Так как у него хроническая болезнь, он всегда берёт с собой лекарства, когда путешествует.</string>
+    <string name="travel08">\nОл жер жүзін аралуға құмар.</string>
+    <string name="travel08R">У него страсть к путешествиям по миру.</string>
+    <string name="travel09">\nКейде жоспарламаған саяхаттар қызығырақ болып шығады.</string>
+    <string name="travel09R">Иногда незапланированные поездки оказываются интереснее.</string>
+    <string name="travel10">Шетел мемлекеттерге саяхат жасағанда, сол мемлекеттердің заңдарын құрметтеуге міндеттісің.</string>
+    <string name="travel10R">Когда путешествуешь в зарубежные страны, ты обязан уважать законы этих стран.</string>
+</resources>

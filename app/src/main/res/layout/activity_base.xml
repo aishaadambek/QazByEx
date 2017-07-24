@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.qazaqbyexample.BaseActivity"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_weight="0.04"
+        android:background="@color/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/textDefault"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Qazaq by Example"
+            android:textColor="@color/textDefault"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/city_395x223" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"
+                    android:text="@string/city"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/cafe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/city"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/cafe_395x263" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/cafe"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/doctors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/cafe"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/doctors_395x252" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/doctors"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/family"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/doctors"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/family_395x146" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/family"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/family"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/food_395x263" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/food"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/friendship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/food"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/friendship_395x226" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/friendship"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/intrYourself"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/friendship"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/introducing_yourself_395x263" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/intr_yourself"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/intrYourself"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/school_395x198" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/school"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/shopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/school"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/shopping_395x263" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/shopping"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/travelling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/shopping"
+                    android:onClick="onClickImg"
+                    app:srcCompat="@drawable/travelling_395x198" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textDefault"
+                    android:textSize="30sp"
+                    android:layout_gravity="bottom"
+                    android:elevation="10dp"
+                    android:text="@string/travelling"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="5"
+                    android:shadowDy="-5"
+                    android:shadowRadius="2.5"/>
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

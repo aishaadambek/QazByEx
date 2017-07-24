@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/miSettings"
+        android:checkable="true"
+        android:enabled="true"
+        android:title="Настройки"
+        android:visible="true"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/miProfile"
+        android:checkable="true"
+        android:enabled="true"
+        android:title="Профиль"
+        android:visible="true"
+        app:showAsAction="never"></item>
+
+</menu>
