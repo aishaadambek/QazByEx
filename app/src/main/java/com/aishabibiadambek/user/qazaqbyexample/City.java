@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Context;
 import android.content.Intent;
@@ -51,10 +51,13 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
 
         View view1 = findViewById(R.id.btn1);
         btn1 = (Button) view1.findViewById(R.id.save);
-            SharedPreferences sharedPreferences1 = getSharedPreferences("Button1" + username, Context.MODE_PRIVATE);
-            if(sharedPreferences1.getBoolean("Green", false)){
-                btn1.setTextColor(ContextCompat.getColor(City.this, R.color.green));
-            }
+        SharedPreferences sharedPreferences1 = getSharedPreferences("Button1" + username, Context.MODE_PRIVATE);
+        if(sharedPreferences1.getBoolean("Green", false)){
+            btn1.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences1.getBoolean("Enabled", true)){
+            btn1.setEnabled(false);
+        }
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +70,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button1" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn1.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -75,6 +81,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
             if(sharedPreferences1p.getBoolean("Green", false)){
                 btn1p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
             }
+        if(!sharedPreferences1p.getBoolean("Enabled", true)){
+            btn1p.setEnabled(false);
+        }
         btn1p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +92,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 btn1p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Button1p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn1p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -93,6 +105,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences2 = getSharedPreferences("Button2" + username, Context.MODE_PRIVATE);
         if(sharedPreferences2.getBoolean("Green", false)){
             btn2.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences2.getBoolean("Enabled", true)){
+            btn2.setEnabled(false);
         }
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +121,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button2" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn2.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -113,6 +131,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences2p = getSharedPreferences("Button2p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences2p.getBoolean("Green", false)){
             btn2p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences2p.getBoolean("Enabled", true)){
+            btn2p.setEnabled(false);
         }
         btn2p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +143,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 btn2p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Button2p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn2p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -133,6 +157,10 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         if(sharedPreferences3.getBoolean("Green", false)){
             btn3.setTextColor(ContextCompat.getColor(City.this, R.color.green));
         }
+        if(!sharedPreferences3.getBoolean("Enabled", true)){
+            btn3.setEnabled(false);
+        }
+
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,6 +173,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button3" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn3.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -152,6 +183,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences3p = getSharedPreferences("Button3p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences3p.getBoolean("Green", false)){
             btn3p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences3p.getBoolean("Enabled", true)){
+            btn3p.setEnabled(false);
         }
         btn3p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,6 +196,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button3p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn3p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -171,6 +208,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences4 = getSharedPreferences("Button4" + username, Context.MODE_PRIVATE);
         if(sharedPreferences4.getBoolean("Green", false)){
             btn4.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences4.getBoolean("Enabled", true)){
+            btn4.setEnabled(false);
         }
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,6 +224,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button4" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn4.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -191,6 +234,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences4p = getSharedPreferences("Button4p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences4p.getBoolean("Green", false)){
             btn4p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences4p.getBoolean("Enabled", true)){
+            btn4p.setEnabled(false);
         }
         btn4p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -201,6 +247,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button4p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn4p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -210,6 +259,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences5 = getSharedPreferences("Button5" + username, Context.MODE_PRIVATE);
         if(sharedPreferences5.getBoolean("Green", false)){
             btn5.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences5.getBoolean("Enabled", true)){
+            btn5.setEnabled(false);
         }
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -223,6 +275,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button5" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn5.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -230,6 +285,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences5p = getSharedPreferences("Button5p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences5p.getBoolean("Green", false)){
             btn5p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences5p.getBoolean("Enabled", true)){
+            btn5p.setEnabled(false);
         }
         btn5p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -240,6 +298,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button5p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn5p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -249,6 +310,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences6 = getSharedPreferences("Button6" + username, Context.MODE_PRIVATE);
         if(sharedPreferences6.getBoolean("Green", false)){
             btn6.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences6.getBoolean("Enabled", true)){
+            btn6.setEnabled(false);
         }
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -262,6 +326,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button6" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn6.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -269,6 +336,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences6p = getSharedPreferences("Button6p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences6p.getBoolean("Green", false)){
             btn6p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences6p.getBoolean("Enabled", true)){
+            btn6p.setEnabled(false);
         }
         btn6p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -279,6 +349,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button6p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn6p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -288,6 +361,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences7 = getSharedPreferences("Button7" + username, Context.MODE_PRIVATE);
         if(sharedPreferences7.getBoolean("Green", false)){
             btn7.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences7.getBoolean("Enabled", true)){
+            btn7.setEnabled(false);
         }
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -301,6 +377,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button7" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn7.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -308,6 +387,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences7p = getSharedPreferences("Button7p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences7p.getBoolean("Green", false)){
             btn7p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences7.getBoolean("Enabled", true)){
+            btn7p.setEnabled(false);
         }
         btn7p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -318,6 +400,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button7p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn7p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -327,6 +412,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences8 = getSharedPreferences("Button8" + username, Context.MODE_PRIVATE);
         if(sharedPreferences8.getBoolean("Green", false)){
             btn8.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences8.getBoolean("Enabled", true)){
+            btn8.setEnabled(false);
         }
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -340,6 +428,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button8" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn8.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -347,6 +438,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences8p = getSharedPreferences("Button8p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences8p.getBoolean("Green", false)){
             btn8p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences8p.getBoolean("Enabled", true)){
+            btn8p.setEnabled(false);
         }
         btn8p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -357,6 +451,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button8p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn8p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -366,6 +463,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences9 = getSharedPreferences("Button9" + username, Context.MODE_PRIVATE);
         if(sharedPreferences9.getBoolean("Green", false)){
             btn9.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences9.getBoolean("Enabled", true)){
+            btn9.setEnabled(false);
         }
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -379,6 +479,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button9" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn9.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -386,6 +489,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences9p = getSharedPreferences("Button9p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences9p.getBoolean("Green", false)){
             btn9p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences9p.getBoolean("Enabled", true)){
+            btn9p.setEnabled(false);
         }
         btn9p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -396,6 +502,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 SharedPreferences sharedPreferences = getSharedPreferences("Button9p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn9p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -405,6 +514,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         SharedPreferences sharedPreferences10 = getSharedPreferences("Button10" + username, Context.MODE_PRIVATE);
         if(sharedPreferences10.getBoolean("Green", false)){
             btn10.setTextColor(ContextCompat.getColor(City.this, R.color.green));
+        }
+        if(!sharedPreferences10.getBoolean("Enabled", true)){
+            btn10.setEnabled(false);
         }
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -426,6 +538,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
         if(sharedPreferences10p.getBoolean("Green", false)){
             btn10p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
         }
+        if(!sharedPreferences10p.getBoolean("Enabled", true)){
+            btn10p.setEnabled(false);
+        }
         btn10p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -434,6 +549,9 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
                 btn10p.setTextColor(ContextCompat.getColor(City.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Button10p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn10p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(City.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }

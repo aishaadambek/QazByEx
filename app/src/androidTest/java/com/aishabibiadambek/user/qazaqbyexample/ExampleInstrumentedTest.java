@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

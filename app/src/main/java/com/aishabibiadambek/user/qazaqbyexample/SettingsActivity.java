@@ -1,5 +1,6 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -28,8 +29,17 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(aboutUs);
                 break;
             case R.id.rateUs:
-                Intent rateUs = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + this.getPackageName()));
-                SettingsActivity.this.startActivity(rateUs);
+                Uri uri = Uri.parse("market://details?id=" + this.getPackageName());
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                        Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                        Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                try {
+                    startActivity(goToMarket);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
+                }
                 break;
             case R.id.share:
                 String shareBody = "Попробуй новое приложение - Qazaq by Example. Подтянешь разговорный казахский!";

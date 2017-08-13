@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            public void onClick(View v) {Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 MainActivity.this.startActivity(intent);
             }
         });

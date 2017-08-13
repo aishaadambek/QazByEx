@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Context;
 import android.content.Intent;
@@ -68,6 +68,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh1" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn1.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -84,6 +87,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn1p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh1p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn1p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -107,6 +113,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh2" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn2.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -123,6 +132,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn2p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh2p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn2p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -146,6 +158,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh3" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn3.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -162,6 +177,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn3p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh3p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn3p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -185,6 +203,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh4" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn4.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -201,6 +222,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn4p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh4p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn4p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -224,6 +248,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh5" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn5.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -240,6 +267,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn5p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh5p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn5p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -262,6 +292,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn6.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh6" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn6.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
@@ -302,6 +335,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh7" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn7.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -318,6 +354,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn7p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh7p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn7p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -341,6 +380,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh8" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn8.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -357,6 +399,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn8p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh8p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn8p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -380,6 +425,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh9" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn9.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -396,6 +444,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn9p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh9p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn9p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -419,6 +470,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh10" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn10.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Shopping.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -435,6 +489,9 @@ public class Shopping extends AppCompatActivity implements LoaderManager.LoaderC
                 btn10p.setTextColor(ContextCompat.getColor(Shopping.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonsh10p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn10p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Shopping.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }

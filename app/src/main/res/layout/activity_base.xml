@@ -4,21 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.qazaqbyexample.BaseActivity"
+    android:background="@color/greyBck"
+    tools:context="com.aishabibiadambek.user.qazaqbyexample.BaseActivity"
     android:weightSum="1">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        app:theme="@style/ThemeOverlay.AppCompat"
         android:layout_width="match_parent"
         android:layout_height="63dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_weight="0.04"
         android:background="@color/colorPrimaryDark"
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
+        android:visibility="visible"
         app:titleTextColor="@color/textDefault"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/toolbar_title"
@@ -39,7 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:id="@+id/scrollView2">
+        android:id="@+id/scrollView2"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -54,7 +61,7 @@
                 <ImageButton
                     android:id="@+id/city"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:onClick="onClickImg"
@@ -68,7 +75,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"
+                    android:shadowRadius="2.0"
                     android:text="@string/city"
                     android:textColor="@color/textDefault"
                     android:textSize="30sp"
@@ -83,12 +90,12 @@
                 <ImageButton
                     android:id="@+id/cafe"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/city"
                     android:onClick="onClickImg"
-                    app:srcCompat="@drawable/cafe_395x263" />
+                    app:srcCompat="@drawable/image" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -102,7 +109,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -113,7 +120,7 @@
                 <ImageButton
                     android:id="@+id/doctors"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/cafe"
@@ -132,7 +139,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -143,7 +150,7 @@
                 <ImageButton
                     android:id="@+id/family"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="147dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/doctors"
@@ -162,7 +169,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -173,7 +180,7 @@
                 <ImageButton
                     android:id="@+id/food"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="217dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@id/family"
@@ -192,7 +199,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -203,7 +210,7 @@
                 <ImageButton
                     android:id="@+id/friendship"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/food"
@@ -222,7 +229,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -233,7 +240,7 @@
                 <ImageButton
                     android:id="@+id/intrYourself"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="220dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/friendship"
@@ -252,7 +259,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -263,7 +270,7 @@
                 <ImageButton
                     android:id="@+id/school"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="197dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/intrYourself"
@@ -282,7 +289,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -293,7 +300,7 @@
                 <ImageButton
                     android:id="@+id/shopping"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/school"
@@ -312,7 +319,7 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
 
@@ -323,7 +330,7 @@
                 <ImageButton
                     android:id="@+id/travelling"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="197dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/shopping"
@@ -342,15 +349,12 @@
                     android:shadowColor="@color/grey"
                     android:shadowDx="5"
                     android:shadowDy="-5"
-                    android:shadowRadius="2.5"/>
+                    android:shadowRadius="2.0"/>
 
             </FrameLayout>
-
-
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </RelativeLayout>

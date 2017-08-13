@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,71 +26,70 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login2);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_login2);
 
-        etUsername = (EditText) findViewById(R.id.etUsername);
-        etPassword = (EditText) findViewById(R.id.etPassword);
-        logButton = (Button) findViewById(R.id.buttonLogin);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        logButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
+            etUsername = (EditText) findViewById(R.id.etUsername);
+            etPassword = (EditText) findViewById(R.id.etPassword);
+            logButton = (Button) findViewById(R.id.buttonLogin);
 
-                final String username = etUsername.getText().toString();
-                final String password = etPassword.getText().toString();
+            logButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-                Response.Listener<String> listener = new Response.Listener<String>(){
+                    final String username = etUsername.getText().toString();
+                    final String password = etPassword.getText().toString();
 
-                    @Override
-                    public void onResponse(String response) {
+                    Response.Listener<String> listener = new Response.Listener<String>() {
 
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
-                            if(success){
-                                String name = jsonResponse.getString("name");
+                        @Override
+                        public void onResponse(String response) {
 
-                                SharedPreferences userInfo = getSharedPreferences("USER_INFO", Context.MODE_PRIVATE);
-                                SharedPreferences.Editor editor = userInfo.edit();
-                                editor.putString("name", name);
-                                editor.putString("username", username);
-                                editor.putString("password", password);
-                                editor.apply();
+                            try {
+                                JSONObject jsonResponse = new JSONObject(response);
+                                boolean success = jsonResponse.getBoolean("success");
+                                if (success) {
+                                    String name = jsonResponse.getString("name");
 
-                                Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                LoginActivity.this.startActivity(intent);
+                                    SharedPreferences userInfo = getSharedPreferences("USER_INFO", Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = userInfo.edit();
+                                    editor.putString("name", name);
+                                    editor.putString("username", username);
+                                    editor.putString("password", password);
+                                    editor.apply();
 
-                                finish();
-                            } else {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this,
-                                        R.style.AlertDialogCustom);
-                                builder.setTitle("Ошибка")
-                                        .setMessage("Неверный логин или пароль")
-                                        .setNegativeButton("Попробуйте снова", null)
-                                        .setIcon(R.drawable.ic_error_white_24dp)
-                                        .create()
-                                        .show();
+                                    Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
+                                    LoginActivity.this.startActivity(intent);
+
+                                    finish();
+                                } else {
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this,
+                                            R.style.AlertDialogCustom);
+                                    builder.setTitle("Ошибка")
+                                            .setMessage("Неверный логин или пароль")
+                                            .setNegativeButton("Попробуйте снова", null)
+                                            .setIcon(R.drawable.ic_error_white_24dp)
+                                            .create()
+                                            .show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+
                         }
+                    };
 
-                    }
-                };
+                    LoginRequest loginRequest = new LoginRequest(username, password, listener);
+                    RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+                    queue.add(loginRequest);
 
-                LoginRequest loginRequest = new LoginRequest(username, password, listener);
-                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-                queue.add(loginRequest);
-
-            }
-        });
-    }
-
-
+                }
+            });
+        }
 }

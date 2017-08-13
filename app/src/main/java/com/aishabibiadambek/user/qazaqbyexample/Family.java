@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Context;
 import android.content.Intent;
@@ -56,6 +56,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         if(sharedPreferences1.getBoolean("Green", false)){
             btn1.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
         }
+        if(!sharedPreferences1.getBoolean("Enabled", true)){
+            btn1.setEnabled(false);
+        }
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +71,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm1" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn1.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -75,6 +81,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences1p = getSharedPreferences("Buttonfm1p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences1p.getBoolean("Green", false)){
             btn1p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences1p.getBoolean("Enabled", true)){
+            btn1p.setEnabled(false);
         }
         btn1p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +94,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm1p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn1p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -94,6 +106,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences2 = getSharedPreferences("Buttonfm2" + username, Context.MODE_PRIVATE);
         if(sharedPreferences2.getBoolean("Green", false)){
             btn2.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences2.getBoolean("Enabled", true)){
+            btn2.setEnabled(false);
         }
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +122,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm2" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn2.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -114,6 +132,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences2p = getSharedPreferences("Buttonfm2p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences2p.getBoolean("Green", false)){
             btn2p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences2p.getBoolean("Enabled", true)){
+            btn2p.setEnabled(false);
         }
         btn2p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +145,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm2p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn2p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -133,6 +157,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences3 = getSharedPreferences("Buttonfm3" + username, Context.MODE_PRIVATE);
         if(sharedPreferences3.getBoolean("Green", false)){
             btn3.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences3.getBoolean("Enabled", true)){
+            btn3.setEnabled(false);
         }
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,6 +173,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm3" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn3.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -153,6 +183,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences3p = getSharedPreferences("Buttonfm3p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences3p.getBoolean("Green", false)){
             btn3p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences3p.getBoolean("Enabled", true)){
+            btn3p.setEnabled(false);
         }
         btn3p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,6 +196,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm3p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn3p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -172,6 +208,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences4 = getSharedPreferences("Buttonfm4" + username, Context.MODE_PRIVATE);
         if(sharedPreferences4.getBoolean("Green", false)){
             btn4.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences4.getBoolean("Enabled", true)){
+            btn4.setEnabled(false);
         }
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,6 +224,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm4" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn4.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -192,6 +234,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences4p = getSharedPreferences("Buttonfm4p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences4p.getBoolean("Green", false)){
             btn4p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences4p.getBoolean("Enabled", true)){
+            btn4p.setEnabled(false);
         }
         btn4p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,6 +247,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm4p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn4p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -211,6 +259,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences5 = getSharedPreferences("Buttonfm5" + username, Context.MODE_PRIVATE);
         if(sharedPreferences5.getBoolean("Green", false)){
             btn5.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences5.getBoolean("Enabled", true)){
+            btn5.setEnabled(false);
         }
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -224,6 +275,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm5" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn5.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -231,6 +285,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences5p = getSharedPreferences("Buttonfm5p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences5p.getBoolean("Green", false)){
             btn5p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences5p.getBoolean("Enabled", true)){
+            btn5p.setEnabled(false);
         }
         btn5p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -241,6 +298,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm5p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn5p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -250,6 +310,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences6 = getSharedPreferences("Buttonfm6" + username, Context.MODE_PRIVATE);
         if(sharedPreferences6.getBoolean("Green", false)){
             btn6.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences6.getBoolean("Enabled", true)){
+            btn6.setEnabled(false);
         }
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -263,6 +326,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm6" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn6.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -270,6 +336,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences6p = getSharedPreferences("Buttonfm6p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences6p.getBoolean("Green", false)){
             btn6p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences6p.getBoolean("Enabled", true)){
+            btn6p.setEnabled(false);
         }
         btn6p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -280,6 +349,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm6p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn6p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -289,6 +361,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences7 = getSharedPreferences("Buttonfm7" + username, Context.MODE_PRIVATE);
         if(sharedPreferences7.getBoolean("Green", false)){
             btn7.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences7.getBoolean("Enabled", true)){
+            btn7.setEnabled(false);
         }
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -302,6 +377,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm7" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn7.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -309,6 +387,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences7p = getSharedPreferences("Buttonfm7p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences7p.getBoolean("Green", false)){
             btn7p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences7p.getBoolean("Enabled", true)){
+            btn7p.setEnabled(false);
         }
         btn7p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -319,6 +400,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm7p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn7p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -328,6 +412,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences8 = getSharedPreferences("Buttonfm8" + username, Context.MODE_PRIVATE);
         if(sharedPreferences8.getBoolean("Green", false)){
             btn8.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences8.getBoolean("Enabled", true)){
+            btn8.setEnabled(false);
         }
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -341,6 +428,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm8" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn8.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -348,6 +438,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences8p = getSharedPreferences("Buttonfm8p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences8p.getBoolean("Green", false)){
             btn8p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences8p.getBoolean("Enabled", true)){
+            btn8p.setEnabled(false);
         }
         btn8p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -358,6 +451,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm8p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn8p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -367,6 +463,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences9 = getSharedPreferences("Buttonfm9" + username, Context.MODE_PRIVATE);
         if(sharedPreferences9.getBoolean("Green", false)){
             btn9.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences9.getBoolean("Enabled", true)){
+            btn9.setEnabled(false);
         }
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -380,6 +479,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm9" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn9.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -387,6 +489,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences9p = getSharedPreferences("Buttonfm9p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences9p.getBoolean("Green", false)){
             btn9p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences9p.getBoolean("Enabled", true)){
+            btn9p.setEnabled(false);
         }
         btn9p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -397,6 +502,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm9p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn9p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -406,6 +514,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences10 = getSharedPreferences("Buttonfm10" + username, Context.MODE_PRIVATE);
         if(sharedPreferences10.getBoolean("Green", false)){
             btn10.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences10.getBoolean("Enabled", true)){
+            btn10.setEnabled(false);
         }
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -419,6 +530,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm10" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn10.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Family.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -426,6 +540,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
         SharedPreferences sharedPreferences10p = getSharedPreferences("Buttonfm10p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences10p.getBoolean("Green", false)){
             btn10p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
+        }
+        if(!sharedPreferences10p.getBoolean("Enabled", true)){
+            btn10p.setEnabled(false);
         }
         btn10p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -435,6 +552,9 @@ public class Family extends AppCompatActivity implements LoaderManager.LoaderCal
                 btn10p.setTextColor(ContextCompat.getColor(Family.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttonfm10p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn10p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Family.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }

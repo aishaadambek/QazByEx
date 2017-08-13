@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Context;
 import android.content.Intent;
@@ -56,6 +56,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         if(sharedPreferences1.getBoolean("Green", false)){
             btn1.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
         }
+        if(!sharedPreferences1.getBoolean("Enabled", true)){
+            btn1.setEnabled(false);
+        }
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +71,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond1" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn1.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -75,6 +81,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences1p = getSharedPreferences("Buttond1p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences1p.getBoolean("Green", false)){
             btn1p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences1p.getBoolean("Enabled", true)){
+            btn1p.setEnabled(false);
         }
         btn1p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +93,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 btn1p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond1p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn1p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -95,6 +107,10 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         if(sharedPreferences2.getBoolean("Green", false)){
             btn2.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
         }
+        if(!sharedPreferences2.getBoolean("Enabled", true)){
+            btn2.setEnabled(false);
+        }
+
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +123,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond2" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn2.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -114,6 +133,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences2p = getSharedPreferences("Buttond2p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences2p.getBoolean("Green", false)){
             btn2p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences2p.getBoolean("Enabled", true)){
+            btn2p.setEnabled(false);
         }
         btn2p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +145,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 btn2p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond2p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn2p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -134,6 +159,10 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         if(sharedPreferences3.getBoolean("Green", false)){
             btn3.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
         }
+        if(!sharedPreferences3.getBoolean("Enabled", true)){
+            btn3.setEnabled(false);
+        }
+
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -146,6 +175,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond3" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn3.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -154,6 +186,10 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         if(sharedPreferences3p.getBoolean("Green", false)){
             btn3p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
         }
+        if(!sharedPreferences3p.getBoolean("Enabled", true)){
+            btn3p.setEnabled(false);
+        }
+
         btn3p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -162,6 +198,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 btn3p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond3p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn3p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
@@ -172,6 +211,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences4 = getSharedPreferences("Buttond4" + username, Context.MODE_PRIVATE);
         if(sharedPreferences4.getBoolean("Green", false)){
             btn4.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences4.getBoolean("Enabled", true)){
+            btn4.setEnabled(false);
         }
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,6 +227,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond4" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn4.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -192,6 +237,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences4p = getSharedPreferences("Buttond4p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences4p.getBoolean("Green", false)){
             btn4p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences4.getBoolean("Enabled", true)){
+            btn4p.setEnabled(false);
         }
         btn4p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,6 +250,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond4p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn4p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -211,6 +262,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences5 = getSharedPreferences("Buttond5" + username, Context.MODE_PRIVATE);
         if(sharedPreferences5.getBoolean("Green", false)){
             btn5.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences5.getBoolean("Enabled", true)){
+            btn5.setEnabled(false);
         }
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -224,6 +278,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond5" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn5.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -231,6 +288,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences5p = getSharedPreferences("Buttond5p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences5p.getBoolean("Green", false)){
             btn5p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences5p.getBoolean("Enabled", true)){
+            btn5p.setEnabled(false);
         }
         btn5p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -241,6 +301,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond5p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn5p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -250,6 +313,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences6 = getSharedPreferences("Buttond6" + username, Context.MODE_PRIVATE);
         if(sharedPreferences6.getBoolean("Green", false)){
             btn6.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences6.getBoolean("Enabled", true)){
+            btn6.setEnabled(false);
         }
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -263,6 +329,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond6" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn6.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -270,6 +339,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences6p = getSharedPreferences("Buttond6p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences6p.getBoolean("Green", false)){
             btn6p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences6p.getBoolean("Enabled", true)){
+            btn6p.setEnabled(false);
         }
         btn6p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -280,6 +352,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond6p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn6p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -289,6 +364,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences7 = getSharedPreferences("Buttond7" + username, Context.MODE_PRIVATE);
         if(sharedPreferences7.getBoolean("Green", false)){
             btn7.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences7.getBoolean("Enabled", true)){
+            btn7.setEnabled(false);
         }
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -302,6 +380,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond7" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn7.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -309,6 +390,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences7p = getSharedPreferences("Buttond7p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences7p.getBoolean("Green", false)){
             btn7p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences7p.getBoolean("Enabled", true)){
+            btn7p.setEnabled(false);
         }
         btn7p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -319,6 +403,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond7p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn7p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -328,6 +415,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences8 = getSharedPreferences("Buttond8" + username, Context.MODE_PRIVATE);
         if(sharedPreferences8.getBoolean("Green", false)){
             btn8.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences8.getBoolean("Enabled", true)){
+            btn8.setEnabled(false);
         }
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -341,6 +431,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond8" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn8.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -348,6 +441,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences8p = getSharedPreferences("Buttond8p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences8p.getBoolean("Green", false)){
             btn8p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences8p.getBoolean("Enabled", true)){
+            btn8p.setEnabled(false);
         }
         btn8p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -358,6 +454,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond8p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn8p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -367,6 +466,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences9 = getSharedPreferences("Buttond9" + username, Context.MODE_PRIVATE);
         if(sharedPreferences9.getBoolean("Green", false)){
             btn9.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences9.getBoolean("Enabled", true)){
+            btn9.setEnabled(false);
         }
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -380,6 +482,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond9" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn9.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -387,6 +492,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences9p = getSharedPreferences("Buttond9p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences9p.getBoolean("Green", false)){
             btn9p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences9p.getBoolean("Enabled", true)){
+            btn9p.setEnabled(false);
         }
         btn9p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -397,6 +505,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond9p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn9p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -406,6 +517,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences10 = getSharedPreferences("Buttond10" + username, Context.MODE_PRIVATE);
         if(sharedPreferences10.getBoolean("Green", false)){
             btn10.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences10.getBoolean("Enabled", true)){
+            btn10.setEnabled(false);
         }
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -419,6 +533,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond10" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
 
+                btn10.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
+
                 Toast.makeText(Doctors.this, "Добавлено", Toast.LENGTH_SHORT).show();
             }
         });
@@ -426,6 +543,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
         SharedPreferences sharedPreferences10p = getSharedPreferences("Buttond10p" + username, Context.MODE_PRIVATE);
         if(sharedPreferences10p.getBoolean("Green", false)){
             btn10p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
+        }
+        if(!sharedPreferences10.getBoolean("Enabled", true)){
+            btn10p.setEnabled(false);
         }
         btn10p.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -435,6 +555,9 @@ public class Doctors extends AppCompatActivity implements LoaderManager.LoaderCa
                 btn10p.setTextColor(ContextCompat.getColor(Doctors.this, R.color.green));
                 SharedPreferences sharedPreferences = getSharedPreferences("Buttond10p" + username, Context.MODE_PRIVATE);
                 sharedPreferences.edit().putBoolean("Green", true).apply();
+
+                btn10p.setEnabled(false);
+                sharedPreferences.edit().putBoolean("Enabled", false).apply();
 
                 Toast.makeText(Doctors.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }

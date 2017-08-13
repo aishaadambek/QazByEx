@@ -1,144 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.user.qazaqbyexample">
+    package="com.aishabibiadambek.user.qazaqbyexample">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <compatible-screens>
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="normal" />
+    </compatible-screens>
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon3"
+        android:icon="@drawable/icon_qaz"
         android:label="Qazaq by Example"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon_qaz"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.MainActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.MainActivity" />
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.MainActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.MainActivity" />
         </activity>
-        <activity android:name=".UserAreaActivity" />
+        <activity
+            android:name=".UserAreaActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".BaseActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+        </activity>
         <activity
             android:name=".SettingsActivity"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".UserAccount"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".City"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Cafe"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Doctors"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Family"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Food"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Friends"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Intro"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".School"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Shopping"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".Travelling"
-            android:parentActivityName=".BaseActivity">
+            android:parentActivityName=".BaseActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.BaseActivity" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.BaseActivity" />
         </activity>
         <activity
             android:name=".MyList"
-            android:parentActivityName=".UserAccount">
+            android:parentActivityName=".UserAccount"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.UserAccount" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.UserAccount" />
         </activity>
         <activity
             android:name=".ChangePassword"
-            android:parentActivityName=".UserAccount">
+            android:parentActivityName=".UserAccount"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.user.qazaqbyexample.UserAccount" />
+                android:value="com.aishabibiadambek.user.qazaqbyexample.UserAccount" />
+        </activity>
+        <activity
+            android:name=".AboutUs"
+            android:parentActivityName=".SettingsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aishabibiadambek.user.qazaqbyexample.SettingsActivity" />
+        </activity>
+        <activity android:name=".SearchResultsActivity"
+            android:parentActivityName=".BaseActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
         </activity>
     </application>
 

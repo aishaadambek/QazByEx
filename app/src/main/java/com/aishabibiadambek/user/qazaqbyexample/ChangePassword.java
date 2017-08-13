@@ -1,4 +1,4 @@
-package com.aishaadambek.user.qazaqbyexample;
+package com.aishabibiadambek.user.qazaqbyexample;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,17 +48,15 @@ public class ChangePassword extends AppCompatActivity {
                 final String name = userInfo.getString("name", "");
                 final String username = userInfo.getString("username", "");
 
-                Log.d("AAAAA", oldPW + " " + newPW + " " + newPWch + " " + password);
-
                 if (!newPW.equals(newPWch) || !oldPW.equals(password)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(ChangePassword.this,
                             R.style.AlertDialogCustom);
-                    builder.setMessage("Проверьте правильность введённых данных!")
+                    builder.setTitle("Ошибка")
+                            .setMessage("Проверьте правильность введённых данных!")
                             .setNegativeButton("ОК", null)
                             .setIcon(R.drawable.ic_error_white_24dp);
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
-                    alertDialog.getWindow().setLayout(700, 700);
                 } else {
 
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -75,12 +72,12 @@ public class ChangePassword extends AppCompatActivity {
 
                                     AlertDialog.Builder builder = new AlertDialog.Builder(ChangePassword.this,
                                             R.style.AlertDialogCustom);
-                                    builder.setMessage("Пароль успешно изменён")
+                                    builder.setTitle("Поздравляем")
+                                            .setMessage("Пароль успешно изменён")
                                             .setNegativeButton("ОК", null)
                                             .setIcon(R.drawable.ic_done_white_24dp);
                                     AlertDialog alertDialog = builder.create();
                                     alertDialog.show();
-                                    alertDialog.getWindow().setLayout(700, 700);
 
                                     etOldPassword.setText("");
                                     etNewPassword.setText("");
@@ -89,12 +86,12 @@ public class ChangePassword extends AppCompatActivity {
                                 } else {
                                     AlertDialog.Builder builder = new AlertDialog.Builder(ChangePassword.this,
                                             R.style.AlertDialogCustom);
-                                    builder.setMessage("Неизвестная ошибка")
+                                    builder.setTitle("Ошибка")
+                                            .setMessage("Неизвестная ошибка")
                                             .setNegativeButton("Попробуйте снова", null)
                                             .setIcon(R.drawable.ic_error_white_24dp);
                                     AlertDialog alertDialog = builder.create();
                                     alertDialog.show();
-                                    alertDialog.getWindow().setLayout(900, 900);
                                 }
 
                             } catch (JSONException e) {

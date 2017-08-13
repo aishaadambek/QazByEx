@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/textAccent"
-    tools:context="com.example.user.qazaqbyexample.LoginActivity">
+    tools:context="com.aishabibiadambek.user.qazaqbyexample.RegisterActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        app:theme="@style/ThemeOverlay.AppCompat"
         android:background="@color/colorPrimaryDark"
         app:titleTextColor="@color/textDefault"
         android:layout_width="0dp"
@@ -78,7 +79,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="Пароль"
-            android:inputType="textPersonName" />
+            android:inputType="textPassword" />
     </LinearLayout>
 
     <Button

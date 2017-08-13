@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.qazaqbyexample.UserAreaActivity"
+    tools:context="com.aishabibiadambek.user.qazaqbyexample.UserAreaActivity"
     android:background="@color/colorPrimary">
 
     <TextView
@@ -19,7 +19,7 @@
         android:text="Добро пожаловать, "
         android:textAlignment="center"
         android:textColor="@color/textDefault"
-        android:textSize="23sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/text"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -42,7 +42,7 @@
         android:text="@string/welcomeText"
         android:textAlignment="center"
         android:textColor="@color/textDefault"
-        android:textSize="17dp"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"

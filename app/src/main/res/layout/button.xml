@@ -5,7 +5,6 @@
     android:layout_height="wrap_content">
     <Button
         android:textColor="@color/darkGrey"
-        android:onClick="onClickBtn"
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +19,6 @@
 
     <Button
         android:textColor="@color/darkGrey"
-        android:onClick="onClickBtn"
         android:id="@+id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
