@@ -58,6 +58,7 @@
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
+                android:textIsSelectable="true"
                 android:text="@string/cafe01"
                 android:textColor="@color/indigo"
                 android:textSize="22sp"
@@ -89,6 +90,7 @@
             <TextView
                 android:id="@+id/tv3"
                 style="@style/MyTextViewStyle"
+                android:textIsSelectable="true"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:text="@string/cafe02"
@@ -121,6 +123,7 @@
 
             <TextView
                 android:id="@+id/tv5"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -154,6 +157,7 @@
 
             <TextView
                 android:id="@+id/tv7"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -187,6 +191,7 @@
 
             <TextView
                 android:id="@+id/tv9"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -220,6 +225,7 @@
 
             <TextView
                 android:id="@+id/tv11"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -253,6 +259,7 @@
 
             <TextView
                 android:id="@+id/tv13"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -286,6 +293,7 @@
 
             <TextView
                 android:id="@+id/tv15"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -320,6 +328,7 @@
 
             <TextView
                 android:id="@+id/tv17"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -353,6 +362,7 @@
 
             <TextView
                 android:id="@+id/tv19"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"

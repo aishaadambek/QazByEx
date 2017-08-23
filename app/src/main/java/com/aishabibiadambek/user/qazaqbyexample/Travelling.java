@@ -11,6 +11,7 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +27,7 @@ public class Travelling extends AppCompatActivity implements LoaderManager.Loade
     DB db;
     SimpleCursorAdapter scAdapter;
     String username;
+    private static final int DEFINITION = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -559,6 +561,517 @@ public class Travelling extends AppCompatActivity implements LoaderManager.Loade
                 Toast.makeText(Travelling.this, "Усвоено", Toast.LENGTH_SHORT).show();
             }
         });
+
+        final TextView tv1 = (TextView) findViewById(R.id.tv1);
+        tv1.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv1.getText().length();
+                        if (tv1.isFocused()) {
+                            final int selStart = tv1.getSelectionStart();
+                            final int selEnd = tv1.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv1.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv3 = (TextView) findViewById(R.id.tv3);
+        tv3.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv3.getText().length();
+                        if (tv3.isFocused()) {
+                            final int selStart = tv3.getSelectionStart();
+                            final int selEnd = tv3.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv3.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv5 = (TextView) findViewById(R.id.tv5);
+        tv5.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv5.getText().length();
+                        if (tv5.isFocused()) {
+                            final int selStart = tv5.getSelectionStart();
+                            final int selEnd = tv5.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv5.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv7 = (TextView) findViewById(R.id.tv7);
+        tv7.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv7.getText().length();
+                        if (tv7.isFocused()) {
+                            final int selStart = tv7.getSelectionStart();
+                            final int selEnd = tv7.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv7.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv9 = (TextView) findViewById(R.id.tv9);
+        tv9.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv9.getText().length();
+                        if (tv9.isFocused()) {
+                            final int selStart = tv9.getSelectionStart();
+                            final int selEnd = tv9.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv9.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv11 = (TextView) findViewById(R.id.tv11);
+        tv11.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv11.getText().length();
+                        if (tv11.isFocused()) {
+                            final int selStart = tv11.getSelectionStart();
+                            final int selEnd = tv11.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv11.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv13 = (TextView) findViewById(R.id.tv13);
+        tv13.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv13.getText().length();
+                        if (tv13.isFocused()) {
+                            final int selStart = tv13.getSelectionStart();
+                            final int selEnd = tv13.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv13.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv15 = (TextView) findViewById(R.id.tv15);
+        tv15.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv15.getText().length();
+                        if (tv15.isFocused()) {
+                            final int selStart = tv15.getSelectionStart();
+                            final int selEnd = tv15.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv15.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv17 = (TextView) findViewById(R.id.tv17);
+        tv17.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv17.getText().length();
+                        if (tv17.isFocused()) {
+                            final int selStart = tv17.getSelectionStart();
+                            final int selEnd = tv17.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv17.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
+        final TextView tv19 = (TextView) findViewById(R.id.tv19);
+        tv19.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+            @Override
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                menu.removeItem(android.R.id.selectAll); // Remove the "select all" option
+                menu.removeItem(android.R.id.cut); // Remove the "cut" option
+                menu.removeItem(android.R.id.copy); // Remove the "copy all" option
+                return true;
+            }
+
+            @Override
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                menu.add(Menu.NONE, DEFINITION, Menu.NONE, "Перевести"); // Called when action mode is first created. The menu supplied will be used to generate action buttons for the action mode
+                return true;
+            }
+
+            @Override
+            public void onDestroyActionMode(ActionMode mode) {
+                // Called when an action mode is about to be exited and destroyed
+            }
+
+            @Override
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                switch (item.getItemId()) {
+                    case DEFINITION:
+                        int min = 0;
+                        int max = tv19.getText().length();
+                        if (tv19.isFocused()) {
+                            final int selStart = tv19.getSelectionStart();
+                            final int selEnd = tv19.getSelectionEnd();
+
+                            min = Math.max(0, Math.min(selStart, selEnd));
+                            max = Math.max(0, Math.max(selStart, selEnd));
+                        }
+                        // Perform your definition lookup with the selected text
+                        final CharSequence selectedText = tv19.getText().subSequence(min, max);
+                        final String input = selectedText.toString();
+
+                        new getTranslation(input, Travelling.this).execute(null, null, null);
+
+                        // Finish and close the ActionMode
+                        mode.finish();
+                        return true;
+                    default:
+                        break;
+                }
+                return false;
+            }
+
+        });
+
     }
 
     public void saveProgress(){

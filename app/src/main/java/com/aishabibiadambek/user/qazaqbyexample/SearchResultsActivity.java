@@ -8,13 +8,11 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class SearchResultsActivity extends AppCompatActivity {
 
     ListView lvData;
-    TextView mTextView;
     DatabaseTable db;
     SimpleCursorAdapter mAdapter;
 

@@ -52,6 +52,7 @@
 
             <TextView
                 android:id="@+id/tv1"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -85,6 +86,7 @@
 
             <TextView
                 android:id="@+id/tv3"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -118,6 +120,7 @@
 
             <TextView
                 android:id="@+id/tv5"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -151,6 +154,7 @@
 
             <TextView
                 android:id="@+id/tv7"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -184,6 +188,7 @@
 
             <TextView
                 android:id="@+id/tv9"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -217,6 +222,7 @@
 
             <TextView
                 android:id="@+id/tv11"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -250,6 +256,7 @@
 
             <TextView
                 android:id="@+id/tv13"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -283,6 +290,7 @@
 
             <TextView
                 android:id="@+id/tv15"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -317,6 +325,7 @@
 
             <TextView
                 android:id="@+id/tv17"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -350,6 +359,7 @@
 
             <TextView
                 android:id="@+id/tv19"
+                android:textIsSelectable="true"
                 style="@style/MyTextViewStyle"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
