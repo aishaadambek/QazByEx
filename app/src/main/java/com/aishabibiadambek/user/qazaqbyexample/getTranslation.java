@@ -1,10 +1,13 @@
 package com.aishabibiadambek.user.qazaqbyexample;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,6 +27,7 @@ public class getTranslation  extends AsyncTask<Void, Void, String> {
     String input;
     Context context;
     ProgressDialog progress;
+    Dialog dialog;
 
     public getTranslation(String input, Context context) {
         this.input = input.toLowerCase();
@@ -87,14 +91,27 @@ public class getTranslation  extends AsyncTask<Void, Void, String> {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        AlertDialog.Builder builder = new AlertDialog.Builder(context,
-                R.style.AlertDialogCustom);
+       /* AlertDialog.Builder builder = new AlertDialog.Builder(context,
+                R.layout.custom_dialog);
         builder.setTitle("Перевод")
                 .setMessage(result)
                 .setIcon(R.drawable.ic_search_white_24dp)
                 .setPositiveButton("ОК", null)
                 .create()
                 .show();
+                */
+        dialog = new Dialog(context);
+        dialog.setContentView(R.layout.custom_dialog);
+        TextView content = (TextView) dialog.findViewById(R.id.content);
+        Button btnOk = (Button) dialog.findViewById(R.id.btnOk);
+        content.setText(response);
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 }
 
