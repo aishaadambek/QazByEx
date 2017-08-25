@@ -1,5 +1,6 @@
 package com.aishabibiadambek.user.qazaqbyexample;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,11 +30,28 @@ public class City extends AppCompatActivity implements LoaderManager.LoaderCallb
     SimpleCursorAdapter scAdapter;
     String username;
     private static final int DEFINITION = 1;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city);
+
+        if(getSharedPreferences("INSTR", Context.MODE_PRIVATE).getBoolean("shown", false)){
+            //do nothing
+        } else {
+            getSharedPreferences("INSTR", Context.MODE_PRIVATE).edit().putBoolean("shown", true).apply();
+            dialog = new Dialog(City.this);
+            dialog.setContentView(R.layout.instruction);
+            Button btnOk = (Button) dialog.findViewById(R.id.btnOk);
+            btnOk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.show();
+        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

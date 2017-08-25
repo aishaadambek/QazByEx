@@ -1,7 +1,7 @@
 package com.aishabibiadambek.user.qazaqbyexample;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -18,27 +18,29 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import dmax.dialog.SpotsDialog;
+
 /**
  * Created by User on 23.08.2017.
  */
 
 public class getTranslation  extends AsyncTask<Void, Void, String> {
 
-    String input;
-    Context context;
-    ProgressDialog progress;
-    Dialog dialog;
+    private String input;
+    private Context context;
+    private Dialog dialog;
+    private AlertDialog progressDialog;
+
 
     public getTranslation(String input, Context context) {
         this.input = input.toLowerCase();
         this.context = context;
+        progressDialog = new SpotsDialog(context, R.style.Custom);
     }
 
     protected void onPreExecute() {
         super.onPreExecute();
-        progress = new ProgressDialog(context);
-        progress.setMessage("Загрузка");
-        progress.show();
+        progressDialog.show();
     }
 
     protected String doInBackground(Void... urls) {
@@ -67,12 +69,12 @@ public class getTranslation  extends AsyncTask<Void, Void, String> {
 
     protected void onPostExecute(String response) {
         super.onPostExecute(response);
-        progress.dismiss();
         if (response == null) {
             response = "Упс! Произошла ошибка.";
         }
+        progressDialog.dismiss();
         Log.i("INFO", response);
-        String result = "";
+        String result = "Перевод";
         try {
             JSONObject obj = new JSONObject(response);
             JSONArray arr = obj.getJSONArray("tuc");
@@ -104,7 +106,7 @@ public class getTranslation  extends AsyncTask<Void, Void, String> {
         dialog.setContentView(R.layout.custom_dialog);
         TextView content = (TextView) dialog.findViewById(R.id.content);
         Button btnOk = (Button) dialog.findViewById(R.id.btnOk);
-        content.setText(response);
+        content.setText(result);
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
