@@ -44,9 +44,7 @@ public class getTranslation  extends AsyncTask<Void, Void, String> {
     }
 
     protected String doInBackground(Void... urls) {
-        // Do some validation here
-
-        try {
+         try {
             URL url = new URL("https://glosbe.com/gapi/translate?from=kaz&dest=rus&format=json&phrase=" + input + "&pretty=true");
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             try {
@@ -73,7 +71,6 @@ public class getTranslation  extends AsyncTask<Void, Void, String> {
             response = "Упс! Произошла ошибка.";
         }
         progressDialog.dismiss();
-        Log.i("INFO", response);
         String result = "Перевод";
         try {
             JSONObject obj = new JSONObject(response);
@@ -87,21 +84,12 @@ public class getTranslation  extends AsyncTask<Void, Void, String> {
                 builder.append(entries[i] + "\n");
             }
             result = builder.toString();
-            if(result.length() == 0){
-                result = "К сожалению, перевод не найден. Функция перевода требует выделения только основы слова. Попробуйте снова";
+            if(result.length() == 0 || result.equals("Перевод")){
+                result = "К сожалению, перевод не найден. Функция перевода требует выделения только основы слова. Попробуйте снова.";
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-       /* AlertDialog.Builder builder = new AlertDialog.Builder(context,
-                R.layout.custom_dialog);
-        builder.setTitle("Перевод")
-                .setMessage(result)
-                .setIcon(R.drawable.ic_search_white_24dp)
-                .setPositiveButton("ОК", null)
-                .create()
-                .show();
-                */
         dialog = new Dialog(context);
         dialog.setContentView(R.layout.custom_dialog);
         TextView content = (TextView) dialog.findViewById(R.id.content);

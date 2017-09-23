@@ -10,7 +10,6 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeCloseDrawable">@drawable/ic_arrow_back_white_24dp</item>
         <item name="android:actionModeBackground">@color/colorPrimaryDark</item>
-        <item name="android:actionModeStyle">@style/ActionMode</item>
     </style>
 
     <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
@@ -35,9 +34,6 @@
         <item name="DialogSpotCount">8</item>
     </style>
 
-    <style name="ActionMode" parent="Base.Widget.AppCompat.ActionMode">
-        <item name="android:textColor">@color/textDefault</item>
-    </style>
 
 
 </resources>
