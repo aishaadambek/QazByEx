@@ -6,3 +6,8 @@ Android educational app to help people learn Qazaq language. Finished and publis
 Depending on your motives:
 - You will need Android Studio to run the code and test it for bugs/efficiency. Additionally, make sure you have an Android phone and an Emulator to test how the program works.
 - You may simply download the app and see how it works on your phone.
+
+### Main Functionality: 
+
+- Instant translation available using volley libraries and Glosbe API;
+- Created local databases using SQLite and server databases for user authentication with help of PHP and web hosting.
