@@ -10,4 +10,4 @@ Depending on your motives:
 ### Main Functionality: 
 
 - Instant translation available using volley libraries and Glosbe API;
-- Created local databases using SQLite and server databases for user authentication with help of PHP and web hosting.
+- Local databases created using SQLite and server databases for user authentication with help of PHP and web hosting.
